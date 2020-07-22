@@ -1,0 +1,11 @@
+<!-- hello/templates/home.html -->
+ 
+<h1>용어사전</h1>
+
+	
+{% for blog in blogs.all %}
+    <h1><a href="{% url 'detail' blog.id %}">제목 : {{blog.title}}</a></h1><p>작성시간 : {{blog.created_at}}</p>
+{% endfor %}
+
+<a href="/new">글쓰기</a>
+
